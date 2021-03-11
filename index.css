@@ -1,10 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+/* LOGO font */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 
 /* default styling */
 * {
     padding: 0;
     margin: 0;
     font-family: 'PT Sans', sans-serif;
+}
+p {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
 }
 
 *,
@@ -13,6 +26,9 @@
     box-sizing: border-box;
 }
 
+.nav-list {
+    display: inline-block;
+}
 .nav-list li{
     display: inline-block;
 }
@@ -22,10 +38,76 @@
     display: block;
 }
 
+nav {
+    display: flex;
+}
+
+.logo {
+    font-family: 'Caveat', cursive;
+    font-size: 36px;
+    margin-left: 20px;
+    padding: 10px 20px;
+}
+
+.big-picture {
+    background-image: url('./images/softpink.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: white;
+    text-align: end;
+}
+.big-picture h2{
+    font-size: 70px;
+}
+.big-picture p{
+    font-size: 30px;
+}
 
 
 /* Mobile mediaquery */
 @media screen and (max-width: 750px) {
+    nav {
+        display: block;
+        position: relative;
+    }
+
+    .logo {
+        display: block;
+    }
+    .nav-burger {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 4px;
+        height: 100%;
+        width: 60px;
+    }
+
+    .nav-burger-inner,
+    .nav-burger-inner::before,
+    .nav-burger-inner::after {
+        display: block;
+        position: absolute;
+        background-color: black;
+        height: 4px;
+        width: 10px;
+    }
+
+    .nav-list {
+        /* display: none; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    .nav-link {
+        border-top: #f3f1f1 solid 1px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 8px;
+    }
 
 }
 
