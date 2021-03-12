@@ -72,26 +72,58 @@ nav {
         position: relative;
     }
 
+    .nav-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+
     .logo {
         display: block;
     }
     .nav-burger {
         display: block;
         position: absolute;
-        right: 10px;
-        top: 4px;
-        height: 100%;
-        width: 60px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all ease-in-out 200ms;
     }
 
     .nav-burger-inner,
     .nav-burger-inner::before,
     .nav-burger-inner::after {
+        content: '';
         display: block;
         position: absolute;
         background-color: black;
-        height: 4px;
-        width: 10px;
+        height: 5px;
+        width: 70%;
+    }
+
+    .nav-burger__active::before {
+        transform: rotateY(45deg);
+        background-color: red;
+    }
+
+    .nav-burger__active::after {
+        transform: rotateY(-45deg);
+    }
+
+    .nav-burger-inner::before {
+        top: 10px;
+        width: 100%;
+    }
+
+    .nav-burger-inner::after {
+        bottom: 10px;
+        width: 100%;
     }
 
     .nav-list {
