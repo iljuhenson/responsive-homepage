@@ -26,11 +26,20 @@ h3 {
     box-sizing: border-box;
 }
 
+header {
+    position: fixed;
+    width: 100vw;
+}
+.nav-wrapper {
+    background-color: white;
+}
+
 .nav-list {
     display: inline-block;
 }
 .nav-list li{
     display: inline-block;
+    background-color: white;
 }
 .nav-link {
     text-decoration: none;
@@ -65,13 +74,27 @@ nav {
 }
 
 
+
 /* Mobile mediaquery */
 @media screen and (max-width: 750px) {
+
+    /* creating burger-menu */
     nav {
         display: block;
         position: relative;
+        overflow: hidden;
     }
-
+    .nav-link {
+        padding: 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-top: solid rgb(230, 230, 230) 1px;
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+    }
     .nav-wrapper {
         position: relative;
         overflow: hidden;
@@ -93,9 +116,9 @@ nav {
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        transition: all ease-in-out 200ms;
+        overflow: hidden;
     }
-
+    
     .nav-burger-inner,
     .nav-burger-inner::before,
     .nav-burger-inner::after {
@@ -105,15 +128,7 @@ nav {
         background-color: black;
         height: 5px;
         width: 70%;
-    }
-
-    .nav-burger__active::before {
-        transform: rotateY(45deg);
-        background-color: red;
-    }
-
-    .nav-burger__active::after {
-        transform: rotateY(-45deg);
+        transition: all ease-in-out 200ms;
     }
 
     .nav-burger-inner::before {
@@ -126,25 +141,33 @@ nav {
         width: 100%;
     }
 
-    .nav-list {
-        /* display: none; */
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        
+    .nav-burger__active::before {
+        transform: translateY(-100%);
+        opacity: 0;
     }
-    .nav-link {
-        border-top: #f3f1f1 solid 1px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        padding: 8px;
+
+    .nav-burger__active::after {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    .list-wrapper {
+        display: none;
+        overflow: hidden;
+    }
+
+    .nav-list {
+        transition: all ease-in-out 200ms;
+        transform: scaleY(0);
+    }
+
+    .nav-list__active {
+        transform: scaleY(1);
     }
 
 }
 
 /* Desktop mediaquery */
-@media screen and (min-width: 751px) {
+@media screen and (min-width: 751px) {  
     .nav-burger {
         display: none;
     }
