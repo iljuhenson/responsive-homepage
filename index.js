@@ -10,11 +10,12 @@ document.addEventListener("DOMContentLoaded", function() {
         navigation = document.querySelector(".list-wrapper");
         if(burgerContent.classList.contains("nav-burger__active")) {
             burgerContent.classList.remove("nav-burger__active");
-            navigation.style.display = "none";
-            setTimeout(navigation.children[0].classList.remove("nav-list__active"), 2000);
+            navigation.classList.remove("list-wrapper__active");
+            navigation.children[0].classList.remove("nav-list__active");
+
         } else {
             burgerContent.classList.add("nav-burger__active");
-            navigation.style.display = "block";
+            navigation.classList.add("list-wrapper__active");
             navigation.children[0].classList.add("nav-list__active");
         }
     })
