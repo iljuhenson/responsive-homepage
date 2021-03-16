@@ -9,8 +9,8 @@
     font-family: 'PT Sans', sans-serif;
 }
 
-html {
-    -webkit-tap-highlight-color: transparent;
+html nav {
+    -webkit-tap-highlight-color: rgb(230, 230, 230);
 }
 
 p {
