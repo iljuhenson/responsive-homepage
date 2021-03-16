@@ -10,7 +10,7 @@
 }
 
 html nav {
-    -webkit-tap-highlight-color: rgb(230, 230, 230);
+    -webkit-tap-highlight-color: rgba(230, 230, 230, .3);
 }
 
 p {
