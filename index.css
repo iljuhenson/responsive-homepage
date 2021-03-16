@@ -8,6 +8,11 @@
     margin: 0;
     font-family: 'PT Sans', sans-serif;
 }
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
 p {
     font-size: 20px;
 }
@@ -24,9 +29,6 @@ h3 {
 *::after,
 *::before {
     box-sizing: border-box;
-}
-nav a {
-    -webkit-tap-highlight-color: rgb(230, 230, 230);
 }
 
 header {
