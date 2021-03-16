@@ -25,6 +25,9 @@ h3 {
 *::before {
     box-sizing: border-box;
 }
+nav a {
+    -webkit-tap-highlight-color: rgb(230, 230, 230);
+}
 
 header {
     z-index: 1000;
@@ -87,9 +90,7 @@ nav {
         
         background-color: white;
     }
-    nav a:focus {
-        background-color: rgba(255, 255, 255, 0);
-    }
+    
     .nav-link {
         padding: 8px 0;
         color: black;
