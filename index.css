@@ -84,7 +84,7 @@ nav {
     font-size: 70px;
 }
 .big-picture p{
-    font-size: 30px;
+    font-size: 26px;
 }
 
 div.wrapper {
@@ -94,10 +94,71 @@ div.wrapper {
 }
 
 .nav-wrapper {
-    margin: 0 auto;
-    padding: 0 20px;
+    margin-left: 20px;
 }
 
+section {
+    padding: 50px 0;
+}
+
+.paragraph-section p {
+    margin-bottom: 20px;
+}
+
+nav {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.image-description {
+    background-color: #f8b7cd;
+}
+
+.description-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description-elements h3 {
+    margin-bottom: 6px;
+}
+
+.text-description {
+    background-color: #fff;
+    padding: 20px 10px;
+}
+
+.image-description .wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 10px;
+}
+
+.big-image {
+    grid-column: span 2;
+}
+
+.image-description .wrapper > div > img {
+    height: 100%;
+    width: 100%;
+    user-select: none;
+}
+
+.contacts {
+    background-color: #c0d8ee;
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset > * {
+    display: block;
+}
 
 /* Mobile mediaquery */
 @media screen and (max-width: 750px) {
@@ -216,4 +277,66 @@ div.wrapper {
     .nav-burger {
         display: none;
     }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .list-wrapper {
+        margin-right: 20px;
+    }
+    
+    .nav-list {
+        display: flex;
+        align-items: center;
+        height: 100%; 
+    }
+
+    
+    .nav-link {
+        padding: 16px 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+    }
+
+    .nav-link:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 15%;
+        left: calc(50% - 1px);
+        transform: translateX(-50%);
+        height: 3px;
+        width: 0;
+        background: #c0d8ee;
+        transition: all ease-in-out 300ms;
+        transform-origin: center;
+    }
+
+    .nav-link:hover:after {
+        width: 20%;
+    }
+
+    .big-picture {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .big-picture .wrapper{
+        text-align: center;
+    }
+
+    .big-picture .wrapper > * {
+        margin-bottom: 30px;
+    }
+
+    .header-spacing {
+        height: 0;
+    }
+
 }
