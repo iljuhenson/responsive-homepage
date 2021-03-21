@@ -222,12 +222,11 @@ input:focus {
 
 footer {
     background-color: #000;
-    color: white;
 }
 
 footer a {
     text-decoration: none;
-    color: white;
+    color: #ddd;
     display: block;
 }
 
@@ -237,7 +236,9 @@ footer > .wrapper {
 }
 
 footer > .wrapper > * {
-    padding: 20px;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #ddd;
 }
 
 
