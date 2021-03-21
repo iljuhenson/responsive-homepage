@@ -8,7 +8,7 @@
     <title>Homepage</title>
 </head>
 <body>
-    <div class="header-spacing">
+    <div id="top" class="header-spacing">
         <header>
             <nav>
                 <div class="nav-wrapper">
@@ -65,16 +65,21 @@
             <div class="wrapper">
                 <h2>Hey, contact us!</h2>
                 <fieldset>
-                    <input type="text" id="field-name">
-                    <input type="email" id="field-email">
-                    <input type="text" id="field-order">
+                    <div>
+                        <input type="text" id="field-name" placeholder="Name" requierd>
+                        <input type="email" id="field-email" placeholder="Email" requierd>
+                    </div>
+                    <textarea rows="5" id="field-order" placeholder="What would you want from us?"></textarea>
                     <input type="submit" value="Submit" id="btn-submit">
                 </fieldset>
             </div>
         </section>
     </main>
     <footer>
-
+        <div class="wrapper">
+            <p>©iljuhenson 2021</p>
+            <a href="#top">Back to top</a>
+        </div>
     </footer>
     <script src="index.js"></script>
 </body>

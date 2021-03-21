@@ -159,20 +159,86 @@ fieldset {
     border: none;
 }
 
-fieldset > * {
+fieldset * {
     display: block;
 }
 
+fieldset > div {
+    display: flex;
+    
+}
+
+fieldset > div > * {
+    width: 50%;
+    
+}
+
+.contacts h2 {
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#field-name {
+    margin-right: 10px;
+}
+
+#field-order {
+    width: 100%;
+    resize: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+}
+#field-order:focus {
+    outline: none;
+}
 
 input {
     border-radius: 0;
     border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
 input:focus {
     outline: none;
 }
 
+#btn-submit {
+    background-color: #fff;
+    color: black;
+    margin: 0 auto;
+    width: 150px;
+    cursor: pointer;
+}
+
+#btn-submit:hover {
+    background-color: #eee;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+footer > .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > .wrapper > * {
+    padding: 20px;
+}
 
 
 /* Mobile mediaquery */
@@ -181,8 +247,7 @@ input:focus {
     /* creating burger-menu */
     nav {
         display: block;
-        position: relative;
-        
+        position: relative;        
         background-color: white;
     }
     
@@ -285,6 +350,16 @@ input:focus {
     .big-picture div{
         padding: 30px 20px;
     }
+    .big-picture h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .big-picture p {
+        font-size: 20px;
+        text-align: center;
+    }
+
     .big-image {
         display: none;
     }
